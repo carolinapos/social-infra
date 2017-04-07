@@ -6,3 +6,35 @@ body {
   color: #727272;
   font-weight: 300;
 }
+
+svg {
+    width: 500px;
+}
+svg g {
+    z-index: -1;
+}
+
+#tooltip {
+    display: none;
+    padding: 10px;
+    width: 200px;
+    height: 150px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    border: 1px solid #444;
+    background-color: #fff;
+    border-radius: 4px;
+}
+
+.st0{opacity:1;fill-rule:evenodd;clip-rule:evenodd;fill:#E6ECFE;stroke:#FFFFFF;stroke-width:0.737;stroke-linejoin:bevel;stroke-miterlimit:10;}
+
+.st1{opacity:1;fill-rule:evenodd;clip-rule:evenodd;fill:#AFC1F7;stroke:#FFFFFF;stroke-width:0.737;stroke-linejoin:bevel;stroke-miterlimit:10;}
+
+.st2{opacity:1;fill-rule:evenodd;clip-rule:evenodd;fill:#7996EB;stroke:#FFFFFF;stroke-width:0.737;stroke-linejoin:bevel;stroke-miterlimit:10;}
+
+.st3{opacity:1;fill-rule:evenodd;clip-rule:evenodd;fill:#4268DB;stroke:#FFFFFF;stroke-width:0.737;stroke-linejoin:bevel;stroke-miterlimit:10;}
+
+.st4{opacity:1;fill-rule:evenodd;clip-rule:evenodd;fill:#0938C5;stroke:#FFFFFF;stroke-width:0.737;stroke-linejoin:bevel;stroke-miterlimit:10;}
+
+.st5{opacity:1;fill-rule:evenodd;clip-rule:evenodd;fill:#FAFBFF;stroke:#FFFFFF;stroke-width:0.737;stroke-linejoin:bevel;stroke-miterlimit:10;}
