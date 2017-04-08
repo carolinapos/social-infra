@@ -3,12 +3,11 @@ body {
   padding: 0px;
   margin: 0px;
   font-family: 'Lato', sans-serif;
-  color: #727272;
+  color: #000;
   font-weight: 300;
 }
 
 svg {
-    width: 500px;
 }
 svg g {
     z-index: -1;
@@ -26,15 +25,61 @@ svg g {
     background-color: #fff;
     border-radius: 4px;
 }
+#tooltip h1 {
+    font-size: 14px;
+}
+#tooltip span {
+    font-weight: bold;
+    font-size: 14px;
+}
+#tooltip ul {
+    margin: 0;
+    padding: 0;
+}
+#tooltip ul li {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
 
-.st0{opacity:1;fill-rule:evenodd;clip-rule:evenodd;fill:#E6ECFE;stroke:#FFFFFF;stroke-width:0.737;stroke-linejoin:bevel;stroke-miterlimit:10;}
+.maps {
+    background-color: blue;
+    width: 80%;
+    margin: 0 10%;
+}
+.maps .map {
+    display: inline;
+    float: left;
+    width: 24%;
+    /*width: 500px;*/
+    margin-right: 1%;
+}
+.maps .map svg {
+    width: 100%;
+}
 
-.st1{opacity:1;fill-rule:evenodd;clip-rule:evenodd;fill:#AFC1F7;stroke:#FFFFFF;stroke-width:0.737;stroke-linejoin:bevel;stroke-miterlimit:10;}
+.map_01 .st1{opacity:1;fill-rule:evenodd;clip-rule:evenodd;fill:#AFC1F7;stroke:#FFFFFF;stroke-width:0.737;stroke-linejoin:bevel;stroke-miterlimit:10;}
+.map_01 .st2{opacity:1;fill-rule:evenodd;clip-rule:evenodd;fill:#7996EB;stroke:#FFFFFF;stroke-width:0.737;stroke-linejoin:bevel;stroke-miterlimit:10;}
+.map_01 .st3{opacity:1;fill-rule:evenodd;clip-rule:evenodd;fill:#4268DB;stroke:#FFFFFF;stroke-width:0.737;stroke-linejoin:bevel;stroke-miterlimit:10;}
+.map_01 .st4{opacity:1;fill-rule:evenodd;clip-rule:evenodd;fill:#0938C5;stroke:#FFFFFF;stroke-width:0.737;stroke-linejoin:bevel;stroke-miterlimit:10;}
+.map_01 .st0{opacity:1;fill-rule:evenodd;clip-rule:evenodd;fill:#E6ECFE;stroke:#FFFFFF;stroke-width:0.737;stroke-linejoin:bevel;stroke-miterlimit:10;}
+.map_01 .st5{opacity:1;fill-rule:evenodd;clip-rule:evenodd;fill:#FAFBFF;stroke:#FFFFFF;stroke-width:0.737;stroke-linejoin:bevel;stroke-miterlimit:10;}
 
-.st2{opacity:1;fill-rule:evenodd;clip-rule:evenodd;fill:#7996EB;stroke:#FFFFFF;stroke-width:0.737;stroke-linejoin:bevel;stroke-miterlimit:10;}
+.map_02 .st0{opacity:1;fill-rule:evenodd;clip-rule:evenodd;fill:#45CD9D;stroke:#FFFFFF;stroke-width:0.737;stroke-linejoin:bevel;stroke-miterlimit:10;}
+.map_02 .st1{opacity:1;fill-rule:evenodd;clip-rule:evenodd;fill:#74E2BB;stroke:#FFFFFF;stroke-width:0.737;stroke-linejoin:bevel;stroke-miterlimit:10;}
+.map_02 .st2{opacity:1;fill-rule:evenodd;clip-rule:evenodd;fill:#A3F0D5;stroke:#FFFFFF;stroke-width:0.737;stroke-linejoin:bevel;stroke-miterlimit:10;}
+.map_02 .st3{opacity:1;fill-rule:evenodd;clip-rule:evenodd;fill:#15B57D;stroke:#FFFFFF;stroke-width:0.737;stroke-linejoin:bevel;stroke-miterlimit:10;}
+.map_02 .st4{opacity:1;fill-rule:evenodd;clip-rule:evenodd;fill:#D1FAEC;stroke:#FFFFFF;stroke-width:0.737;stroke-linejoin:bevel;stroke-miterlimit:10;}
 
-.st3{opacity:1;fill-rule:evenodd;clip-rule:evenodd;fill:#4268DB;stroke:#FFFFFF;stroke-width:0.737;stroke-linejoin:bevel;stroke-miterlimit:10;}
+.map_03 .st0{opacity:1;fill-rule:evenodd;clip-rule:evenodd;fill:#FBACEF;stroke:#FFFFFF;stroke-width:0.737;stroke-linejoin:bevel;stroke-miterlimit:10;}
+.map_03 .st1{opacity:1;fill-rule:evenodd;clip-rule:evenodd;fill:#F274DF;stroke:#FFFFFF;stroke-width:0.737;stroke-linejoin:bevel;stroke-miterlimit:10;}
+.map_03 .st2{opacity:1;fill-rule:evenodd;clip-rule:evenodd;fill:#FFE5FB;stroke:#FFFFFF;stroke-width:0.737;stroke-linejoin:bevel;stroke-miterlimit:10;}
+.map_03 .st3{opacity:1;fill-rule:evenodd;clip-rule:evenodd;fill:#E33BCA;stroke:#FFFFFF;stroke-width:0.737;stroke-linejoin:bevel;stroke-miterlimit:10;}
+.map_03 .st4{opacity:1;fill-rule:evenodd;clip-rule:evenodd;fill:#CF01B0;stroke:#FFFFFF;stroke-width:0.737;stroke-linejoin:bevel;stroke-miterlimit:10;}
+.map_03 .st5{opacity:1;fill-rule:evenodd;clip-rule:evenodd;fill:#FFFAFE;stroke:#FFFFFF;stroke-width:0.737;stroke-linejoin:bevel;stroke-miterlimit:10;}
 
-.st4{opacity:1;fill-rule:evenodd;clip-rule:evenodd;fill:#0938C5;stroke:#FFFFFF;stroke-width:0.737;stroke-linejoin:bevel;stroke-miterlimit:10;}
-
-.st5{opacity:1;fill-rule:evenodd;clip-rule:evenodd;fill:#FAFBFF;stroke:#FFFFFF;stroke-width:0.737;stroke-linejoin:bevel;stroke-miterlimit:10;}
+.map_04 .st0{opacity:1;fill-rule:evenodd;clip-rule:evenodd;fill:#F7B474;stroke:#FFFFFF;stroke-width:0.737;stroke-linejoin:bevel;stroke-miterlimit:10;}
+.map_04 .st1{opacity:1;fill-rule:evenodd;clip-rule:evenodd;fill:#EF933B;stroke:#FFFFFF;stroke-width:0.737;stroke-linejoin:bevel;stroke-miterlimit:10;}
+.map_04 .st2{opacity:1;fill-rule:evenodd;clip-rule:evenodd;fill:#FFF2E5;stroke:#FFFFFF;stroke-width:0.737;stroke-linejoin:bevel;stroke-miterlimit:10;}
+.map_04 .st3{opacity:1;fill-rule:evenodd;clip-rule:evenodd;fill:#FDD4AC;stroke:#FFFFFF;stroke-width:0.737;stroke-linejoin:bevel;stroke-miterlimit:10;}
+.map_04 .st4{opacity:1;fill-rule:evenodd;clip-rule:evenodd;fill:#E46E00;stroke:#FFFFFF;stroke-width:0.737;stroke-linejoin:bevel;stroke-miterlimit:10;}
