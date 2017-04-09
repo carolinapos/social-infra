@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="-556.7 275.6 78.7 5.2" style="enable-background:new -556.7 275.6 78.7 5.2;" xml:space="preserve">
+<style type="text/css">
+	.st0{filter:url(#Adobe_OpacityMaskFilter);}
+	.st1{fill:url(#SVGID_2_);}
+	.st2{mask:url(#SVGID_1_);}
+	.st3{clip-path:url(#SVGID_4_);fill:#D101AF;}
+</style>
+<defs>
+	<filter id="Adobe_OpacityMaskFilter" filterUnits="userSpaceOnUse" x="-565" y="269.3" width="95.3" height="11.9">
+		<feFlood  style="flood-color:white;flood-opacity:1" result="back"/>
+		<feBlend  in="SourceGraphic" in2="back" mode="normal"/>
+	</filter>
+</defs>
+<mask maskUnits="userSpaceOnUse" x="-565" y="269.3" width="95.3" height="11.9" id="SVGID_1_">
+	<g class="st0">
+		
+			<linearGradient id="SVGID_2_" gradientUnits="userSpaceOnUse" x1="-939.7297" y1="557.7867" x2="-938.7297" y2="557.7867" gradientTransform="matrix(-58.1557 0 0 58.1557 -55150.9375 -32159.7051)">
+			<stop  offset="0" style="stop-color:#FFFFFF"/>
+			<stop  offset="1" style="stop-color:#000000"/>
+		</linearGradient>
+		<rect x="-1429" y="276.3" class="st1" width="950.3" height="4.9"/>
+	</g>
+</mask>
+<g class="st2">
+	<g>
+		<defs>
+			<rect id="SVGID_3_" x="-565" y="269.3" width="95.3" height="11.9"/>
+		</defs>
+		<clipPath id="SVGID_4_">
+			<use xlink:href="#SVGID_3_"  style="overflow:visible;"/>
+		</clipPath>
+		<rect x="-556" y="276.3" class="st3" width="77.3" height="3.9"/>
+	</g>
+</g>
+</svg>
