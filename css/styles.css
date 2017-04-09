@@ -74,7 +74,7 @@ svg g {
 .header .top {
     /*background-color: pink;*/
     width: 1100px;
-    /*height: 150px;*/
+    height: 109px;
     float: left;
     font-size: 12px;
 }
@@ -84,6 +84,10 @@ svg g {
     float: left;
     width: 251px;
     padding: 12px;
+}
+.top .description a {
+    font-weight: bold;
+    color: #000;
 }
 .person-container {
     /*text-align: center;*/
