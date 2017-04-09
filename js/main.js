@@ -93,19 +93,19 @@ $(document).ready(function(){
 
                 switch (hdi) {
                     case 20:
-                        hdiMessage = 'very low indicators of liveability';
+                        hdiMessage = 'very low indicator of liveability';
                         break;
                     case 40:
-                        hdiMessage = 'low indicators of liveability';
+                        hdiMessage = 'low indicator of liveability';
                         break;
                     case 60:
-                        hdiMessage = 'medium indicators of liveability';
+                        hdiMessage = 'medium indicator of liveability';
                         break;
                     case 80:
-                        hdiMessage = 'high indicators of liveability';
+                        hdiMessage = 'high indicator of liveability';
                         break;
                     case 100:
-                        hdiMessage = 'very high indicators of liveability';
+                        hdiMessage = 'very high indicator of liveability';
                         break;
                 }
 
