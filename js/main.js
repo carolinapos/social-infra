@@ -4,10 +4,14 @@ $(document).ready(function(){
         var quantity = percentage*3/4;
         console.log(className, percentage, quantity);
         if (percentage < 0) {
-            for (var i = 1; i <= 75; i++) {
+            for (var i = 1; i <= quantity; i++) {
                 var selector = '.header .' + className + ' .person-' + i;
-                $(selector)
-                    .attr('src', 'svg/person_red.svg');
+                $(selector).attr('src', 'svg/person_red.svg');
+            }
+            }
+            for (var i = quantity+1; i <= 75; i++) {
+                var selector = '.header .' + className + ' .person-' + i;
+                $(selector).attr('src', 'svg/person_line.svg');
             }
         }
         else {
@@ -153,7 +157,7 @@ $(document).ready(function(){
         $('.header .bottom .title').css('opacity', 0);
         $('.header .bottom > div :not(h3)').css('opacity', 0);
         $('.header .bottom > div h3').css('opacity', 0.25);
-        $('.header .person-container').css('opacity', 0.25);
+        // $('.header .person-container').css('opacity', 0.25;
         fillPeople(0, 'pop');
         fillPeople(0, 'hdi');
         fillPeople(0, 'growth');
