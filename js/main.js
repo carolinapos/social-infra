@@ -44,7 +44,7 @@ $(document).ready(function(){
     $('svg g').each(function(event) {
         var title = $(this).data('title');
         var healthUnits = $(this).data('health-units');
-        var educationUnits = $(this).data('education-units');
+        var educationalUnits = $(this).data('educational-units');
         var culturalUnits = $(this).data('cultural-units');
         var sportsUnits = $(this).data('sports-units');
         var pop = $(this).data('pop');
@@ -64,7 +64,7 @@ $(document).ready(function(){
                     .css('z-index', 1);
                 $('#tooltip h1').html(title);
                 $('#tooltip .health-units').html(healthUnits);
-                $('#tooltip .education-units').html(educationUnits);
+                $('#tooltip .educational-units').html(educationalUnits);
                 $('#tooltip .cultural-units').html(culturalUnits);
                 $('#tooltip .sports-units').html(sportsUnits);
                 $('.header .bottom .title span').html(title);
