@@ -4,14 +4,13 @@ $(document).ready(function(){
         var quantity = percentage*3/4;
         console.log(className, percentage, quantity);
         if (percentage < 0) {
-            for (var i = 1; i <= quantity; i++) {
-                var selector = '.header .' + className + ' .person-' + i;
-                $(selector).attr('src', 'svg/person_red.svg');
-            }
-            }
             for (var i = quantity+1; i <= 75; i++) {
                 var selector = '.header .' + className + ' .person-' + i;
                 $(selector).attr('src', 'svg/person_line.svg');
+            }
+            for (var i = 1; i <= Math.abs(quantity); i++) {
+                var selector = '.header .' + className + ' .person-' + i;
+                $(selector).attr('src', 'svg/person_red.svg');
             }
         }
         else {
@@ -114,7 +113,11 @@ $(document).ready(function(){
                 }
 
                 switch (growth) {
-                    case -1:
+                    case -20:
+                        growthMessage = 'less than 0% population growth';
+                        $('.header .bottom .s_growth > img').attr('src', 'svg/person_red.svg');
+                        break;
+                    case -10:
                         growthMessage = 'less than 0% population growth';
                         $('.header .bottom .s_growth > img').attr('src', 'svg/person_red.svg');
                         break;
@@ -144,10 +147,14 @@ $(document).ready(function(){
                 $('.header .bottom .s_growth span').html(growthMessage);
                 $('#tooltip').show();
             },
-            function(event) {
+                function(event) {
                 $('.' + this.className.baseVal)
                     .find('path')
                         .css('stroke', '#FFF')
+                        .css('stroke-width', '0.737');
+                $('.' + this.className.baseVal)
+                    .find('path.st6')
+                        .css('stroke', '#CECECE')
                         .css('stroke-width', '0.737');
             }
         );
