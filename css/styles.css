@@ -77,8 +77,8 @@ body {
 /*    background-color: yellow;*/
     display: inline;
     float: left;
-    width: 251px;
-    padding: 12px;
+    width: 255px;
+    padding: 10px;
 }
 .top .description a {
     font-weight: bold;
