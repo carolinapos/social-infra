@@ -2,7 +2,6 @@ $(document).ready(function(){
 
     function fillPeople(percentage, className) {
         var quantity = percentage*3/4;
-        console.log(className, percentage, quantity);
         if (percentage < 0) {
             for (var i = quantity+1; i <= 75; i++) {
                 var selector = '.header .' + className + ' .person-' + i;
