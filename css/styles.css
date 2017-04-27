@@ -6,7 +6,6 @@ body {
   color: #000;
   font-weight: 300;
 }
-
 /* Tooltip */
 #tooltip {
     display: none;
@@ -57,11 +56,42 @@ body {
     margin: 0;
     font-size: 12px;
 }
-
 /* Header and Maps */
+.header-home {
+    padding: 5px 0;
+    background-color: #14152d;
+    width: 100%;
+}
+.header-home .links {
+    width: 1100px;
+    margin: 0 auto;
+}
+.header-home .links ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.header-home .links ul li {
+    margin: 0 30px 0 10px;
+    padding: 0;
+    display: inline;
+}
+/*.header-home .links ul li:last-child {
+  margin: 0;
+}*/
+.header-home .links img {
+    height: 10px;
+    margin: 2px 0;
+    /*vertical-align: middle;*/
+ }
+ .header-home .links .logo img{
+    height: 15px;
+    margin: 2px 800px 0 0;
+    /*vertical-align: middle;*/
+ }
 .header,
 .maps {
-    background-color: blue;
+    /*background-color: blue;*/
     width: 1100px;
     margin: 0 auto;
 }
