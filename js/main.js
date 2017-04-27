@@ -149,7 +149,7 @@ $(document).ready(function(){
                 $('.header .bottom .s_growth span').html(growthMessage);
                 $('#tooltip').show();
             },
-                function(event) {
+            function(event) {
                 $('.' + this.className.baseVal)
                     .find('path')
                         .css('stroke', '#FFF')
