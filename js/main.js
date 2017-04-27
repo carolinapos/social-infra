@@ -52,6 +52,9 @@ $(document).ready(function(){
 
         $(this).hover(
             function(event) {
+                $('.' + this.className.baseVal).each(function(event){
+                    $(this).appendTo($(this).parent());
+                });
                 $('.header .bottom .title').css('opacity', 1);
                 $('.header .bottom > div *').css('opacity', 1);
                 $('.header .person-container').css('opacity', 1);
