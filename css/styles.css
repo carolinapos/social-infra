@@ -7,11 +7,6 @@ body {
   font-weight: 300;
 }
 
-svg {
-}
-svg g {
-    z-index: -1;
-}
 /* Tooltip */
 #tooltip {
     display: none;
