@@ -26,54 +26,69 @@ $(document).ready(function(){
 
 
     $('.person-container').each(function(event) {
+        var $this = $(this);
         for (var i = 5; i > 0; i--) {
             for (var j = (i-1) * 15 + 1; j <= i*15; j++) {
                 var className = 'person-' + j;
                 $(this).append('<img class="' + className + ' person" src="svg/person_line.svg">');
             }
-            $(this).append('<br>');
+            $this.append('<br>');
         }
     });
 
     $(document).on("mousemove", function(event) {
-        $('#tooltip').css('top', event.pageY - 135);
-        $('#tooltip').css('left', event.pageX - 53);
+        $('#tooltip')
+            .css('top', event.pageY - 135)
+            .css('left', event.pageX - 53);
     });
 
     $('svg g').each(function(event) {
-        var title = $(this).data('title');
-        var healthUnits = $(this).data('health-units');
-        var educationalUnits = $(this).data('educational-units');
-        var culturalUnits = $(this).data('cultural-units');
-        var sportsUnits = $(this).data('sports-units');
-        var pop = $(this).data('pop');
-        var hdi = $(this).data('hdi');
-        var growth = $(this).data('growth');
+        var $this = $(this);
+        var title = $this.data('title');
+        var healthUnits = $this.data('health-units');
+        var educationalUnits = $this.data('educational-units');
+        var culturalUnits = $this.data('cultural-units');
+        var sportsUnits = $this.data('sports-units');
+        var pop = $this.data('pop');
+        var hdi = $this.data('hdi');
+        var growth = $this.data('growth');
 
-        $(this).hover(
+        $this.hover(
             function(event) {
                 $('.' + this.className.baseVal).each(function(event){
-                    $(this).appendTo($(this).parent());
+                    var $this = $(this);
+                    $this.appendTo($this.parent());
                 });
-                $('.header .bottom .title').css('opacity', 1);
-                $('.header .bottom > div *').css('opacity', 1);
-                $('.header .person-container').css('opacity', 1);
+
+                $('.header .bottom .title, .header .bottom > div *, .header .person-container').css('opacity', 1);
                 $('.' + this.className.baseVal)
                     .find('path')
                         .css('stroke', '#000')
                         .css('stroke-width', '2');
                 $(this)
                     .css('z-index', 1);
-                $('#tooltip h1').html(title);
-                $('#tooltip .health-units').html(healthUnits);
-                $('#tooltip .educational-units').html(educationalUnits);
-                $('#tooltip .cultural-units').html(culturalUnits);
-                $('#tooltip .sports-units').html(sportsUnits);
-                $('.header .bottom .title span').html(title);
+
+                $('#tooltip')
+                    .find('h1')
+                        .html(title)
+                        .end()
+                    .find('.health-units')
+                        .html(healthUnits)
+                        .end()
+                    .find('.educational-units')
+                        .html(educationalUnits)
+                        .end()
+                    .find('.cultural-units')
+                        .html(culturalUnits)
+                        .end()
+                    .find('.sports-units')
+                        .html(sportsUnits)
+                        .end();
 
                 var popMessage;
                 var hdiMessage;
                 var growthMessage;
+                var growthImage;
 
                 switch (pop) {
                     case 16.67:
@@ -117,44 +132,52 @@ $(document).ready(function(){
                 switch (growth) {
                     case -20:
                         growthMessage = 'less than 0% population growth';
-                        $('.header .bottom .s_growth > img').attr('src', 'svg/person_red.svg');
+                        growthImage = 'svg/person_red.svg';
                         break;
                     case -10:
                         growthMessage = 'less than 0% population growth';
-                        $('.header .bottom .s_growth > img').attr('src', 'svg/person_red.svg');
+                        growthImage = 'svg/person_red.svg';
                         break;
                     case 0:
                         growthMessage = '0% population growth';
-                        $('.header .bottom .s_growth > img').attr('src', 'svg/person.svg');
+                        growthImage = 'svg/person.svg';
                         break;
                     case 20:
                         growthMessage = '0 to 2% population growth';
-                        $('.header .bottom .s_growth > img').attr('src', 'svg/person.svg');
+                        growthImage = 'svg/person.svg';
                         break;
                     case 40:
                         growthMessage = '2 to 4% population growth';
-                        $('.header .bottom .s_growth > img').attr('src', 'svg/person.svg');
+                        growthImage = 'svg/person.svg';
                         break;
                     case 60:
                         growthMessage = 'more than 4% population growth';
-                        $('.header .bottom .s_growth > img').attr('src', 'svg/person.svg');
+                        growthImage = 'svg/person.svg';
                         break;
                 }
+
+                $('.header .bottom .s_growth > img').attr('src', growthImage);
 
                 fillPeople(pop, 'pop');
                 fillPeople(hdi, 'hdi');
                 fillPeople(growth, 'growth');
-                $('.header .bottom .s_pop span').html(popMessage);
-                $('.header .bottom .s_hdi span').html(hdiMessage);
-                $('.header .bottom .s_growth span').html(growthMessage);
+                $('.header .bottom')
+                    .find('.s_pop span')
+                        .html(popMessage)
+                        .end()
+                    .find('.s_hdi span')
+                        .html(hdiMessage)
+                        .end()
+                    .find('.s_growth span')
+                        .html(growthMessage);
                 $('#tooltip').show();
             },
             function(event) {
                 $('.' + this.className.baseVal)
                     .find('path')
                         .css('stroke', '#FFF')
-                        .css('stroke-width', '0.737');
-                $('.' + this.className.baseVal)
+                        .css('stroke-width', '0.737')
+                        .end()
                     .find('path.st6')
                         .css('stroke', '#CECECE')
                         .css('stroke-width', '0.737');
@@ -163,9 +186,12 @@ $(document).ready(function(){
     });
     $('svg').mouseout(function(event) {
         $('#tooltip').hide();
-        $('.header .bottom .title').css('opacity', 0);
-        $('.header .bottom > div :not(h3)').css('opacity', 0);
-        $('.header .bottom > div h3').css('opacity', 0.25);
+        $('.header')
+            .find('.bottom .title, .bottom > div :not(h3)')
+                .css('opacity', 0)
+                .end()
+            .find('.bottom > div h3')
+                .css('opacity', 0.25);
         // $('.header .person-container').css('opacity', 0.25;
         fillPeople(0, 'pop');
         fillPeople(0, 'hdi');
