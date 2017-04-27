@@ -190,3 +190,7 @@ body {
 .map_04 .st2{opacity:1;fill-rule:evenodd;clip-rule:evenodd;fill:#FFF2E5;stroke:#FFFFFF;stroke-width:0.737;stroke-linejoin:bevel;stroke-miterlimit:10;}
 .map_04 .st3{opacity:1;fill-rule:evenodd;clip-rule:evenodd;fill:#FDD4AC;stroke:#FFFFFF;stroke-width:0.737;stroke-linejoin:bevel;stroke-miterlimit:10;}
 .map_04 .st4{opacity:1;fill-rule:evenodd;clip-rule:evenodd;fill:#E46E00;stroke:#FFFFFF;stroke-width:0.737;stroke-linejoin:bevel;stroke-miterlimit:10;}
+
+svg.person.common > path {opacity:0.7;fill:#D0D0D0;stroke:#D0D0D0;stroke-width:0.5;stroke-miterlimit:10;}
+svg.person.line > path {fill:none;stroke:#BBBBBB;stroke-width:0.5;stroke-miterlimit:10;}
+svg.person.red > path {fill:none;stroke:#DDABB4;stroke-miterlimit:10;}
