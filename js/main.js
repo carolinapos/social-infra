@@ -1,26 +1,46 @@
-$(document).ready(function(){
+$(function(){
+
+    function getPersonSVG() {
+        getPersonSVG.svg = getPersonSVG.svg || $($('#template-person')[0].outerHTML).show().removeAttr('id');
+        return getPersonSVG.svg.clone();
+    }
+
+    function arrayWithSize(size) {
+        if (size < 1) {
+            return [];
+        }
+        return Array.apply(null, Array(Math.ceil(size)));
+    }
+
+    function personMapper(className) {
+        return function(_, i) {
+            return '.header .' + className + ' .person-' + (i + 1);
+        };
+    }
 
     function fillPeople(percentage, className) {
         var quantity = percentage*3/4;
         if (percentage < 0) {
-            for (var i = quantity+1; i <= 75; i++) {
-                var selector = '.header .' + className + ' .person-' + i;
-                $(selector).attr('src', 'svg/person_line.svg');
-            }
-            for (var i = 1; i <= Math.abs(quantity); i++) {
-                var selector = '.header .' + className + ' .person-' + i;
-                $(selector).attr('src', 'svg/person_red.svg');
-            }
+            var toLine = arrayWithSize(75 - quantity).map(personMapper(className));
+            $(toLine.join(','))
+                .removeClass('common red')
+                .addClass('line');
+
+            var toRed = arrayWithSize(Math.abs(quantity) - 1).map(personMapper(className));
+            $(toRed.join(','))
+                .removeClass('common line')
+                .addClass('red');
         }
         else {
-            for (var i = 1; i <= quantity; i++) {
-                var selector = '.header .' + className + ' .person-' + i;
-                $(selector).attr('src', 'svg/person.svg');
-            }
-            for (var i = quantity+1; i <= 75; i++) {
-                var selector = '.header .' + className + ' .person-' + i;
-                $(selector).attr('src', 'svg/person_line.svg');
-            }
+            var toLine = arrayWithSize(75 - quantity).map(personMapper(className));
+            $(toLine.join(','))
+                .removeClass('common red')
+                .addClass('line');
+
+            var toCommon = arrayWithSize(Math.floor(quantity)).map(personMapper(className));
+            $(toCommon.join(','))
+                .removeClass('red line')
+                .addClass('common');
         }
     }
 
@@ -30,7 +50,7 @@ $(document).ready(function(){
         for (var i = 5; i > 0; i--) {
             for (var j = (i-1) * 15 + 1; j <= i*15; j++) {
                 var className = 'person-' + j;
-                $(this).append('<img class="' + className + ' person" src="svg/person_line.svg">');
+                $this.append(getPersonSVG().addClass(className + ' person line'));
             }
             $this.append('<br>');
         }
