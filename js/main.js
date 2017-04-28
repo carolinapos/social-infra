@@ -104,6 +104,7 @@ $(function(){
                     .find('.sports-units')
                         .html(sportsUnits)
                         .end();
+                $('.header .bottom .title span').html(title);
 
                 var popMessage;
                 var hdiMessage;
