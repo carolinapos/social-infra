@@ -115,8 +115,6 @@ body {
     color: #000;
 }
 .person-container {
-    /*text-align: center;*/
-    opacity: 0.35;
 }
 .person-container .person {
     height: 15px;
